@@ -1,1 +1,5 @@
-# MORETech-team-AXIOM
+# Гитхаб решения хакатона MoreTech 4.0 ВТБ 
+
+## Команда: AXIOM
+
+### Направление: DATA
