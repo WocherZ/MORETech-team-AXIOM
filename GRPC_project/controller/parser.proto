@@ -1,0 +1,11 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+service Parser {
+  rpc getNews (google.protobuf.Empty) returns (stream PureArticle);
+}
+
+message PureArticle {
+  string header = 1;
+  string text = 2;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+service Controller {
+  rpc getNews (google.protobuf.Empty) returns (stream HandleArticle);
+}
+
+enum Role {
+    DIRECTOR = 0;
+    ACCOUNTANT = 1;
+  }
+  
+  
+message HandleArticle {
+    string header = 1;
+    string text = 2;
+    Role role = 3;
+  }

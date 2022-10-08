@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+service Api {
+  rpc getNews (UserRole) returns (Article);
+}
+
+enum RoleType {
+  DIRECTOR_ROLE = 0;
+  ACCOUNTANT_ROLE = 1;
+}
+
+enum ArticleType {
+  INSIDER = 0;
+  TRANDE = 1;
+  DIGEST = 2;
+}
+
+message UserRole {
+  RoleType role = 1;
+}
+
+message Article {
+  string header = 1;
+  string text = 2;
+  ArticleType type = 3;
+}
